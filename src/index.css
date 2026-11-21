@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  /* Editorial Typography Tokens */
+  --font-display: "Fraunces", Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Core Brand Palette Tokens */
+  --color-ivory: #F5F0E6;
+  --color-paper: #FAF7F0;
+  --color-parchment: #ECE4D5;
+
+  --color-sage: #A8B59B;
+  --color-sage-soft: #DCE2D5;
+  --color-sage-muted: #C8D2BE;
+  --color-sage-deep: #4A5947;
+
+  --color-terracotta: #B96F55;
+  --color-terracotta-accessible: #9E5840;
+  --color-terracotta-deep: #864833;
+  --color-terracotta-soft: #F1DFD6;
+
+  --color-olive: #343D33;
+  --color-olive-surface: #3F4A3E;
+  --color-olive-deep: #272E26;
+  --color-olive-muted: #556153;
+  --color-olive-subtle: #667364;
+
+  --color-sand: #E5CFA8;
+  --color-sand-soft: #EFE3CB;
+  --color-sand-deep: #D5BA8C;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    background-color: var(--color-ivory);
+    color: var(--color-olive);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  button, a, input, select, textarea {
+    outline-color: var(--color-terracotta-accessible);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-terracotta-accessible);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle warm archival paper fiber texture (SVG pattern, zero external requests) */
+.bg-editorial-paper {
+  background-color: var(--color-ivory);
+  background-image: radial-gradient(rgba(52, 61, 51, 0.035) 0.75px, transparent 0.75px);
+  background-size: 20px 20px;
+}
+
+.bg-editorial-olive {
+  background-color: var(--color-olive);
+  background-image: radial-gradient(rgba(245, 240, 230, 0.04) 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+.bg-editorial-sage {
+  background-color: var(--color-sage-soft);
+  background-image: radial-gradient(rgba(52, 61, 51, 0.035) 0.75px, transparent 0.75px);
+  background-size: 22px 22px;
+}

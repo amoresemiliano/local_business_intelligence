@@ -1,0 +1,6 @@
+{
+  "name": "Vegen Private Intelligence — Inteligencia Empresarial Soberana",
+  "description": "Inteligencia artificial especializada en tu sector y adaptada a tu empresa, desplegada bajo tu control, con tus datos y tus propias reglas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
